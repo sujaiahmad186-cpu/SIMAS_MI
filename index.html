@@ -66,10 +66,9 @@
             padding-left: 2cm !important;
             font-family: 'Times New Roman', Times, serif !important;
             font-size: 12pt;
-            line-height: 1,15;
+            line-height: 1.15;
             text-align: justify;
             box-sizing: border-box;
-            
         }
 
         .letter-content, .letter-content * {
@@ -89,7 +88,6 @@
         .letter-signature, .letter-signature * {
             font-family: 'Times New Roman', Times, serif !important;
         }
-
 
         @media print {
             @page {
@@ -238,7 +236,7 @@
                         <div>
                             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 text-brand-300 text-xs font-medium border border-brand-500/30 mb-3">
                                 <i class="fa-regular fa-calendar text-xs"></i>
-                                <span id="dashboard-date">Selasa, 11 Agustus 2026</span>
+                                <span id="dashboard-date">Minggu, 1 November 2026</span>
                             </div>
                             <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Selamat Datang di SIMAS</h3>
                             <p class="text-slate-300 text-xs md:text-sm mt-1 max-w-xl">
@@ -271,7 +269,6 @@
                     <div class="flex items-center gap-6 flex-wrap lg:justify-end">
                         <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-2xl border border-slate-200/60">
                             <img id="dash-logo-kiri" src="https://cdn.phototourl.com/free/2026-07-25-07652bbf-d325-4bf9-b.png" alt="Logo Yayasan" class="h-12 w-auto object-contain" onerror="this.src='https://placehold.co/100x100/059669/ffffff?text=Yayasan'">
-                            
                         </div>
 
                         <div class="text-xs space-y-1">
@@ -413,12 +410,9 @@
                             <input type="text" id="prof_alamat" value="Jln. TGH. Mustafa Al-Kholidy Montong Are Kediri Lombok Barat NTB, 83362" required class="w-full px-4 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 font-medium">
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-700 mb-1">URL Logo Kiri (Pemda/Yayasan)</label>
-                                <input type="url" id="prof_logo_kiri" value="https://cdn.phototourl.com/free/2026-07-25-07652bbf-d325-4bf9-b.png" required class="w-full px-4 py-2.5 text-xs font-mono border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
-                            </div>
-                            
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">URL Logo Yayasan / Pemda</label>
+                            <input type="url" id="prof_logo_kiri" value="https://cdn.phototourl.com/free/2026-07-25-07652bbf-d325-4bf9-b.png" required class="w-full px-4 py-2.5 text-xs font-mono border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500">
                         </div>
 
                         <div class="flex justify-end pt-4">
@@ -498,16 +492,15 @@
                         <!-- F4 Paper Printable Area -->
                         <div class="flex justify-center overflow-x-auto p-2">
                             <div id="printable-letter" class="f4-paper text-black select-text">
-                                <!-- Kop Surat Header -->
+                                <!-- Kop Surat Header (Tanpa Logo Kemenag) -->
                                 <div class="flex items-center justify-between border-b-4 border-double border-black pb-1 mb-7">
-                                    <img id="prev-logo-kiri" src="https://cdn.phototourl.com/free/2026-07-25-07652bbf-d325-4bf9-b.png" class="h-24 w-24 object-contain" alt="Logo Kiri">
-                                    <div class="text-center flex-1 px-9">
-                                        <h4 id="prev-yayasan" class="text-[17px]" class="font-bold text-sm tracking-wide">Yayasan Intisyarul Ulum </h4>
+                                    <img id="prev-logo-kiri" src="https://cdn.phototourl.com/free/2026-07-25-07652bbf-d325-4bf9-b.png" class="h-24 w-24 object-contain" alt="Logo Yayasan">
+                                    <div class="text-center flex-1 px-4">
+                                        <h4 id="prev-yayasan" class="text-[17px] font-bold tracking-wide">Yayasan Intisyarul Ulum </h4>
                                         <h1 id="prev-sekolah" class="text-[18px] font-bold" style="font-family: Arial, sans-serif;">MADRASAH IBTIDAYIYAH INTISYARUL ULUM </h1>
-                                        <p id="prev-sub" class="text-[15px] ">MONTONG ARE KECAMATAN KEDIRI KAB. LOMBOK BARAT</p>
+                                        <p id="prev-sub" class="text-[15px]">MONTONG ARE KECAMATAN KEDIRI KAB. LOMBOK BARAT</p>
                                         <p id="prev-alamat" class="text-[14px] italic">Jln. TGH. Mustafa Al-Kholidy Montong Are Kediri Lombok Barat NTB, 83362</p>
                                     </div>
-                                     <img id="prev-logo-kanan" src="https://cdn.phototourl.com/free/2026-07-25-067ff21f-0b15-4714-b51.png" class="h-20 w-20 object-contain hidden" alt="Logo Kanan">
                                 </div>
 
                                 <!-- Dynamic Letter Content -->
@@ -930,7 +923,7 @@ function createJsonResponse(data) {
                     <input type="text" id="m_arsip_penerima" required class="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-brand-500">
                 </div>
                 <div>
-                    <label class="block font-semibold text-slate-700 mb-1">Tanggal Tanggal Surat</label>
+                    <label class="block font-semibold text-slate-700 mb-1">Tanggal Surat</label>
                     <input type="date" id="m_arsip_tanggal" required class="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-brand-500">
                 </div>
                 <div class="flex justify-end gap-2 pt-2">
@@ -1000,8 +993,7 @@ function createJsonResponse(data) {
                 npsn: "60724512",
                 kodepos: "83362",
                 alamat: "Jln. TGH. Mustafa Al-Kholidy Montong Are Kediri Lombok Barat NTB, 83362",
-                logoKiri: "https://cdn.phototourl.com/free/2026-07-25-07652bbf-d325-4bf9-b.png",
-                logoKanan: "https://cdn.phototourl.com/free/2026-07-25-067ff21f-0b15-4714-b51.png"
+                logoKiri: "https://cdn.phototourl.com/free/2026-07-25-07652bbf-d325-4bf9-b.png"
             },
             pegawai: [
                 { id: 1, nama: "BAHRAENI, S.Pd.I", nip: "197801052002121001", nik: "5201155001780001", jabatan: "Kepala MIS Intisyarul Ulum" },
@@ -1017,11 +1009,30 @@ function createJsonResponse(data) {
             ]
         };
 
-        let appData = JSON.parse(localStorage.getItem('simas_app_data_iu')) || defaultState;
+        // Fungsi gabung aman untuk mencegah error undefined jika localStorage korup / tidak lengkap
+        function cleanAndMergeData() {
+            try {
+                let saved = JSON.parse(localStorage.getItem('simas_app_data_iu'));
+                if (!saved || typeof saved !== 'object') return defaultState;
+                return {
+                    gasUrl: saved.gasUrl || defaultState.gasUrl,
+                    profil: { ...defaultState.profil, ...(saved.profil || {}) },
+                    pegawai: Array.isArray(saved.pegawai) ? saved.pegawai : defaultState.pegawai,
+                    suratMasuk: Array.isArray(saved.suratMasuk) ? saved.suratMasuk : defaultState.suratMasuk,
+                    arsip: Array.isArray(saved.arsip) ? saved.arsip : defaultState.arsip
+                };
+            } catch (e) {
+                console.error("Data terkorupsi, memuat defaultState", e);
+                return defaultState;
+            }
+        }
+
+        let appData = cleanAndMergeData();
         let currentViewingPdfData = null;
 
         function showToast(message, type = 'info') {
             const container = document.getElementById('toast-container');
+            if (!container) return;
             const toast = document.createElement('div');
             const bgColors = {
                 success: 'bg-brand-600 text-white',
@@ -1100,7 +1111,8 @@ function createJsonResponse(data) {
                 'arsip': 'Arsip Digital Naskah',
                 'pegawai': 'Data Pegawai & Guru'
             };
-            document.getElementById('top-bar-title').innerText = titles[tabId] || 'SIMAS';
+            const topTitleEl = document.getElementById('top-bar-title');
+            if (topTitleEl) topTitleEl.innerText = titles[tabId] || 'SIMAS';
 
             if (tabId === 'buat-surat') {
                 onSuratJenisChange();
@@ -1117,30 +1129,42 @@ function createJsonResponse(data) {
 
         function startLiveClock() {
             function updateClock() {
+                const clockEl = document.getElementById('live-clock');
+                if (!clockEl) return;
                 const now = new Date();
                 const hrs = String(now.getHours()).padStart(2, '0');
                 const mins = String(now.getMinutes()).padStart(2, '0');
                 const secs = String(now.getSeconds()).padStart(2, '0');
-                document.getElementById('live-clock').innerText = `${hrs}.${mins}.${secs}`;
+                clockEl.innerText = `${hrs}.${mins}.${secs}`;
             }
             updateClock();
             setInterval(updateClock, 1000);
         }
 
         function updateDashboardCounters() {
-            document.getElementById('stat-surat-masuk').innerText = appData.suratMasuk.length;
-            document.getElementById('stat-surat-keluar').innerText = appData.arsip.length;
-            document.getElementById('stat-arsip').innerText = appData.arsip.length;
-            document.getElementById('stat-pegawai').innerText = appData.pegawai.length;
+            const smEl = document.getElementById('stat-surat-masuk');
+            const skEl = document.getElementById('stat-surat-keluar');
+            const arEl = document.getElementById('stat-arsip');
+            const pgEl = document.getElementById('stat-pegawai');
 
-            document.getElementById('dash-nama-sekolah').innerText = appData.profil.sekolah;
-            document.getElementById('dash-yayasan').innerText = appData.profil.yayasan;
-            document.getElementById('dash-npsn').innerText = appData.profil.npsn;
-            if (appData.pegawai.length > 0) {
-                document.getElementById('dash-kepala').innerText = appData.pegawai[0].nama;
+            if (smEl) smEl.innerText = appData.suratMasuk.length;
+            if (skEl) skEl.innerText = appData.arsip.length;
+            if (arEl) arEl.innerText = appData.arsip.length;
+            if (pgEl) pgEl.innerText = appData.pegawai.length;
+
+            const dsSekolah = document.getElementById('dash-nama-sekolah');
+            const dsYayasan = document.getElementById('dash-yayasan');
+            const dsNpsn = document.getElementById('dash-npsn');
+            const dsKepala = document.getElementById('dash-kepala');
+            const dsLogoKiri = document.getElementById('dash-logo-kiri');
+
+            if (dsSekolah) dsSekolah.innerText = appData.profil.sekolah || '';
+            if (dsYayasan) dsYayasan.innerText = appData.profil.yayasan || '';
+            if (dsNpsn) dsNpsn.innerText = appData.profil.npsn || '';
+            if (dsKepala && appData.pegawai.length > 0) {
+                dsKepala.innerText = appData.pegawai[0].nama;
             }
-            if (appData.profil.logoKiri) document.getElementById('dash-logo-kiri').src = appData.profil.logoKiri;
-            if (appData.profil.logoKanan) document.getElementById('dash-logo-kanan').src = appData.profil.logoKanan;
+            if (dsLogoKiri && appData.profil.logoKiri) dsLogoKiri.src = appData.profil.logoKiri;
         }
 
         function renderProfilForm() {
@@ -1151,7 +1175,6 @@ function createJsonResponse(data) {
             document.getElementById('prof_kodepos').value = appData.profil.kodepos || '';
             document.getElementById('prof_alamat').value = appData.profil.alamat || '';
             document.getElementById('prof_logo_kiri').value = appData.profil.logoKiri || '';
-            document.getElementById('prof_logo_kanan').value = appData.profil.logoKanan || '';
         }
 
         function saveProfilForm(e) {
@@ -1163,34 +1186,37 @@ function createJsonResponse(data) {
                 npsn: document.getElementById('prof_npsn').value,
                 kodepos: document.getElementById('prof_kodepos').value,
                 alamat: document.getElementById('prof_alamat').value,
-                logoKiri: document.getElementById('prof_logo_kiri').value,
-                logoKanan: document.getElementById('prof_logo_kanan').value,
+                logoKiri: document.getElementById('prof_logo_kiri').value
             };
             saveLocal();
             showToast('Profil Madrasah berhasil disimpan!', 'success');
         }
 
         function applyLetterFormatting() {
-            const font = document.getElementById('letter-font').value;
-            const size = document.getElementById('letter-size').value;
-            const spacing = document.getElementById('letter-spacing').value;
+            const fontEl = document.getElementById('letter-font');
+            const sizeEl = document.getElementById('letter-size');
+            const spacingEl = document.getElementById('letter-spacing');
             const paper = document.getElementById('printable-letter');
 
-            if (paper) {
-                paper.style.fontFamily = font;
-                paper.style.fontSize = size;
-                paper.style.lineHeight = spacing;
+            if (paper && fontEl && sizeEl && spacingEl) {
+                paper.style.fontFamily = fontEl.value;
+                paper.style.fontSize = sizeEl.value;
+                paper.style.lineHeight = spacingEl.value;
             }
         }
 
         function onSuratJenisChange() {
-            const jenis = document.getElementById('surat_jenis').value;
+            const jenisEl = document.getElementById('surat_jenis');
+            if (!jenisEl) return;
+            const jenis = jenisEl.value;
             const container = document.getElementById('dynamic-form-fields');
             const headerTitle = document.getElementById('section-header-title');
 
-            headerTitle.innerText = `DATA ${jenis.toUpperCase()}`;
+            if (headerTitle) headerTitle.innerText = `DATA ${jenis.toUpperCase()}`;
 
             let pejabatOptions = appData.pegawai.map(p => `<option value="${p.id}">${p.nama} - ${p.jabatan}</option>`).join('');
+
+            if (!container) return;
 
             if (jenis === 'Surat Keterangan Aktif Siswa') {
                 container.innerHTML = `
@@ -1471,24 +1497,36 @@ function createJsonResponse(data) {
         }
 
         function updateLetterPreview() {
-            document.getElementById('prev-yayasan').innerText = appData.profil.yayasan || 'YAYASAN INTISYARUL ULUM';
-            document.getElementById('prev-sekolah').innerText = appData.profil.sekolah || 'MIS INTISYARUL ULUM MONTONG ARE';
-            document.getElementById('prev-sub').innerText = appData.profil.sub || '';
-            document.getElementById('prev-alamat').innerText = appData.profil.alamat || '';
-            if (appData.profil.logoKiri) document.getElementById('prev-logo-kiri').src = appData.profil.logoKiri;
-            if (appData.profil.logoKanan) document.getElementById('prev-logo-kanan').src = appData.profil.logoKanan;
+            const prevYayasan = document.getElementById('prev-yayasan');
+            const prevSekolah = document.getElementById('prev-sekolah');
+            const prevSub = document.getElementById('prev-sub');
+            const prevAlamat = document.getElementById('prev-alamat');
+            const prevLogoKiri = document.getElementById('prev-logo-kiri');
 
-            const jenis = document.getElementById('surat_jenis').value;
+            if (prevYayasan) prevYayasan.innerText = appData.profil.yayasan || 'YAYASAN INTISYARUL ULUM';
+            if (prevSekolah) prevSekolah.innerText = appData.profil.sekolah || 'MIS INTISYARUL ULUM MONTONG ARE';
+            if (prevSub) prevSub.innerText = appData.profil.sub || '';
+            if (prevAlamat) prevAlamat.innerText = appData.profil.alamat || '';
+            if (prevLogoKiri && appData.profil.logoKiri) prevLogoKiri.src = appData.profil.logoKiri;
+
+            const jenisEl = document.getElementById('surat_jenis');
+            if (!jenisEl) return;
+            const jenis = jenisEl.value;
             const container = document.getElementById('letter-content-container');
 
             const noSurat = document.getElementById('surat_nomor') ? document.getElementById('surat_nomor').value : '';
             const selectedPejabatId = document.getElementById('surat_pejabat') ? document.getElementById('surat_pejabat').value : null;
             const pejabat = appData.pegawai.find(p => p.id == selectedPejabatId) || appData.pegawai[0] || { nama: 'BAHRAENI, S.Pd.I', nip: '197801052002121001', jabatan: 'Kepala Madrasah' };
 
-            document.getElementById('prev-ttd-nama').innerText = pejabat.nama;
-            document.getElementById('prev-ttd-nip').innerText = 'NIP. ' + pejabat.nip;
-            document.getElementById('prev-tempat-surat').innerText = document.getElementById('surat_tempat') ? document.getElementById('surat_tempat').value : 'Montong Are';
-            document.getElementById('prev-tgl-surat').innerText = document.getElementById('surat_tgl') ? document.getElementById('surat_tgl').value : '';
+            const ttdNama = document.getElementById('prev-ttd-nama');
+            const ttdNip = document.getElementById('prev-ttd-nip');
+            const ttdTempat = document.getElementById('prev-tempat-surat');
+            const ttdTgl = document.getElementById('prev-tgl-surat');
+
+            if (ttdNama) ttdNama.innerText = pejabat.nama;
+            if (ttdNip) ttdNip.innerText = 'NIP. ' + pejabat.nip;
+            if (ttdTempat) ttdTempat.innerText = document.getElementById('surat_tempat') ? document.getElementById('surat_tempat').value : 'Montong Are';
+            if (ttdTgl) ttdTgl.innerText = document.getElementById('surat_tgl') ? document.getElementById('surat_tgl').value : '';
 
             const namaSiswa = document.getElementById('surat_nama_siswa') ? document.getElementById('surat_nama_siswa').value.toUpperCase() : '';
             const jk = document.getElementById('surat_jk') ? document.getElementById('surat_jk').value : '';
@@ -1496,6 +1534,8 @@ function createJsonResponse(data) {
             const kelas = document.getElementById('surat_kelas') ? document.getElementById('surat_kelas').value : '';
 
             applyLetterFormatting();
+
+            if (!container) return;
 
             if (jenis === 'Surat Keterangan Aktif Siswa') {
                 const nisn = document.getElementById('surat_nisn') ? document.getElementById('surat_nisn').value : '';
@@ -1514,7 +1554,7 @@ function createJsonResponse(data) {
                         <p>Yang bertanda tangan di bawah ini :</p>
                         
                         <div class="pl-6 space-y-1">
-                            <div class="flex"><span class="w-40">Nama</span><span>: <strong >${pejabat.nama}</strong></span></div>
+                            <div class="flex"><span class="w-40">Nama</span><span>: <strong>${pejabat.nama}</strong></span></div>
                             <div class="flex"><span class="w-40">NIP</span><span>: ${pejabat.nip}</span></div>
                             <div class="flex"><span class="w-40">Jabatan</span><span>: ${pejabat.jabatan}</span></div>
                         </div>
@@ -1554,7 +1594,7 @@ function createJsonResponse(data) {
                         <p>Yang bertanda tangan di bawah ini :</p>
                         
                         <div class="pl-6 space-y-1">
-                            <div class="flex"><span class="w-40">Nama</span><span>: <strong >${pejabat.nama}</strong></span></div>
+                            <div class="flex"><span class="w-40">Nama</span><span>: <strong>${pejabat.nama}</strong></span></div>
                             <div class="flex"><span class="w-40">NIP</span><span>: ${pejabat.nip}</span></div>
                             <div class="flex"><span class="w-40">Jabatan</span><span>: ${pejabat.jabatan}</span></div>
                         </div>
@@ -1597,7 +1637,7 @@ function createJsonResponse(data) {
                         <p>Yang bertanda tangan di bawah ini :</p>
                         
                         <div class="pl-6 space-y-1">
-                            <div class="flex"><span class="w-40">Nama</span><span>: <strong >${pejabat.nama}</strong></span></div>
+                            <div class="flex"><span class="w-40">Nama</span><span>: <strong>${pejabat.nama}</strong></span></div>
                             <div class="flex"><span class="w-40">NIP</span><span>: ${pejabat.nip}</span></div>
                             <div class="flex"><span class="w-40">Jabatan</span><span>: ${pejabat.jabatan}</span></div>
                         </div>
@@ -1636,7 +1676,7 @@ function createJsonResponse(data) {
                         <p>Yang bertanda tangan di bawah ini :</p>
                         
                         <div class="pl-6 space-y-1">
-                            <div class="flex"><span class="w-40">Nama</span><span>: <strong >${pejabat.nama}</strong></span></div>
+                            <div class="flex"><span class="w-40">Nama</span><span>: <strong>${pejabat.nama}</strong></span></div>
                             <div class="flex"><span class="w-40">NIP</span><span>: ${pejabat.nip}</span></div>
                             <div class="flex"><span class="w-40">Jabatan</span><span>: ${pejabat.jabatan}</span></div>
                         </div>
@@ -1663,7 +1703,8 @@ function createJsonResponse(data) {
         }
 
         function simpanKeArsip() {
-            const jenis = document.getElementById('surat_jenis').value;
+            const jenisEl = document.getElementById('surat_jenis');
+            const jenis = jenisEl ? jenisEl.value : 'Surat';
             const noSurat = document.getElementById('surat_nomor') ? document.getElementById('surat_nomor').value : 'SURAT-001';
             const namaPenerima = document.getElementById('surat_nama_siswa') ? document.getElementById('surat_nama_siswa').value : 'Siswa';
             const today = new Date().toISOString().split('T')[0];
@@ -1683,6 +1724,7 @@ function createJsonResponse(data) {
 
         function renderTableSuratMasuk() {
             const tbody = document.getElementById('table-surat-masuk-body');
+            if (!tbody) return;
             tbody.innerHTML = '';
 
             if (appData.suratMasuk.length === 0) {
@@ -1847,7 +1889,7 @@ function createJsonResponse(data) {
 
         function printPdfDocument() {
             const iframe = document.getElementById('pdf-frame-viewer');
-            if (!iframe.classList.contains('hidden')) {
+            if (iframe && !iframe.classList.contains('hidden')) {
                 iframe.contentWindow.print();
             } else {
                 window.print();
@@ -1878,6 +1920,7 @@ function createJsonResponse(data) {
 
         function renderTableArsip() {
             const tbody = document.getElementById('table-arsip-body');
+            if (!tbody) return;
             tbody.innerHTML = '';
 
             if (appData.arsip.length === 0) {
@@ -1972,6 +2015,7 @@ function createJsonResponse(data) {
 
         function renderTablePegawai() {
             const tbody = document.getElementById('table-pegawai-body');
+            if (!tbody) return;
             tbody.innerHTML = '';
 
             if (appData.pegawai.length === 0) {
@@ -2119,6 +2163,7 @@ function createJsonResponse(data) {
         function updateGasStatusUI() {
             const dot = document.getElementById('status-dot');
             const text = document.getElementById('status-text');
+            if (!dot || !text) return;
             if (appData.gasUrl) {
                 dot.className = "w-2 h-2 rounded-full bg-emerald-500 animate-pulse";
                 text.innerText = "Terhubung ke Google Sheets";
